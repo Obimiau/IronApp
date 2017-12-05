@@ -19,7 +19,7 @@ authRoutes.post('/signup', (req, res, next) => {
       return;
     }
 
-    const salt     = bcrypt.genSaltSync(10);
+    const salt = bcrypt.genSaltSync(10);
     const hashPass = bcrypt.hashSync(password, salt);
 
     const theUser = new User({
@@ -64,7 +64,7 @@ authRoutes.post('/login', (req, res, next) => {
         return;
       }
 
-  
+
       res.status(200).json(req.user);
     });
   })(req, res, next);
