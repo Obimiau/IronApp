@@ -17,7 +17,7 @@ mongoose.connect(process.env.DBURL).then(() =>{
 });
 
 var whitelist = [
-    'http://localhost:4200',
+    'http://localhost:8100',
 ];
 var corsOptions = {
     origin: function(origin, callback){
