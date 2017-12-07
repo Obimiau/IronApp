@@ -6,11 +6,16 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const auth = require('./routes/auth');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
 const app = express();
+
+const auth = require('./routes/auth');
+const user = require('./routes/user');
+const group = require('./routes/group');
+const project = require('./routes/project');
+
 
 mongoose.connect(process.env.DBURL).then(() =>{
   console.log(`Connected to DB: ${process.env.DBURL}`);
@@ -52,6 +57,9 @@ app.use(session({
 require('./passport')(app);
 
 app.use('/api/auth', auth);
+app.use('/api/user', user);
+app.use('/api/group', group);
+app.use('/api/project', project);
 
 // app.use('/', index);
 // app.use('/users', users);

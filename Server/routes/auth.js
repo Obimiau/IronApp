@@ -5,14 +5,18 @@ const User = require('../models/User');
 const authRoutes = express.Router();
 
 authRoutes.post('/signup', (req, res, next) => {
-  const {username, password} = req.body;
+  const newUser = {
+    username: req.body.username,
+    fullName: req.body.fullName,
+    group: req.body.group,
+    codewars_user: req.body.codewars_user || null,
+    github_user: req.body.github_user || null,
+    fullName: req.body.github_user || null,
+    avatar: req.body.avatar || '/public/images/no_image_user.png',
+    score: req.body.score || 0
+  };
 
-  if (!username || !password) {
-    res.status(400).json({ message: 'Provide username and password' });
-    return;
-  }
-
-  User.findOne({ username }, '_id')
+  User.findOne({ username: newUser.username }, '_id')
   .then(user => {
     if (user) {
       res.status(400).json({ message: 'The username already exists' });
@@ -20,17 +24,15 @@ authRoutes.post('/signup', (req, res, next) => {
     }
 
     const salt = bcrypt.genSaltSync(10);
-    const hashPass = bcrypt.hashSync(password, salt);
+    const hashPass = bcrypt.hashSync(req.body.password, salt);
 
-    const theUser = new User({
-      username,
-      password: hashPass
-    });
+    newUser.password = hashPass;
+    const theUser = new User(newUser);
     return theUser.save();
   })
-  .then(newUser => {
-    console.log(newUser);
-    req.login(newUser, (err) => {
+  .then(createdUser => {
+    console.log(createdUser);
+    req.login(createdUser, (err) => {
       if (err) {
         console.log(err);
         res.status(500).json({ message: 'Something went wrong' });
@@ -47,6 +49,7 @@ authRoutes.post('/signup', (req, res, next) => {
 
 
 authRoutes.post('/login', (req, res, next) => {
+  console.log(req.body);
   passport.authenticate('local', (err, theUser, failureDetails) => {
     if (err) {
       res.status(500).json({ message: 'Something went wrong' });
