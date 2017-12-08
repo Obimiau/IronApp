@@ -25,6 +25,4 @@ groupRoutes.post('/', (req, res, next) => {
   });
 });
 
-
-
 module.exports = groupRoutes;
