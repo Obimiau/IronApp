@@ -9,9 +9,15 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let user of users">
-      <ion-icon name="user" item-start></ion-icon>
-      {{user.fullName}}
-    </button>
+    <ion-item ion-item *ngFor="let user of users">
+      <ion-avatar item-start>
+        <img src="http://www.iconninja.com/files/373/611/612/person-user-profile-male-man-avatar-account-icon.svg">
+      </ion-avatar>
+      <ion-icon class="trophyIcon" name="trophy"></ion-icon>
+      <h2>{{user.fullName}}</h2>
+
+
+      <p>Score {{user.score}}</p>
+    </ion-item>
   </ion-list>
 </ion-content>
