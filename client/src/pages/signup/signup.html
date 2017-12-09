@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1> Sign Up </h1>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input [(ngModel)]="user.username" type="text" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Full Name</ion-label>
+      <ion-input [(ngModel)]="user.fullname" type="text" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Email</ion-label>
+      <ion-input [(ngModel)]="user.email" type="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input [(ngModel)]="user.password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Group</ion-label>
+      <ion-input [(ngModel)]="user.group" type="text" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Score</ion-label>
+      <ion-input [(ngModel)]="user.score" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Codewars User</ion-label>
+      <ion-input [(ngModel)]="user.codewars" type="string"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Github User</ion-label>
+      <ion-input [(ngModel)]="user.github" type="string"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Avatar</ion-label>
+      <ion-input [(ngModel)]="user.avatar" type="string"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button color="dark" (click)="signup(user)"> Signup </button>
+</ion-content>

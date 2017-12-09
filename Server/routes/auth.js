@@ -12,7 +12,7 @@ authRoutes.post('/signup', (req, res, next) => {
     codewars_user: req.body.codewars_user || null,
     github_user: req.body.github_user || null,
     fullName: req.body.github_user || null,
-    avatar: req.body.avatar || '/public/images/no_image_user.png',
+    avatar: req.body.avatar || '/imgs/no_image_user.png',
     score: req.body.score || 0
   };
 
@@ -32,14 +32,15 @@ authRoutes.post('/signup', (req, res, next) => {
   })
   .then(createdUser => {
     console.log(createdUser);
-    req.login(createdUser, (err) => {
-      if (err) {
-        console.log(err);
-        res.status(500).json({ message: 'Something went wrong' });
-        return;
-      }
-      res.status(200).json(req.user);
-    });
+    res.status(200).json(createdUser);
+    // req.login(createdUser, (err) => {
+    //   if (err) {
+    //     console.log(err);
+    //     res.status(500).json({ message: 'Something went wrong' });
+    //     return;
+    //   }
+    //   res.status(200).json(req.user);
+    // });
   })
   .catch(e => {
       console.log(e)

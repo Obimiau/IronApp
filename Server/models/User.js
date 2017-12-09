@@ -8,7 +8,7 @@ const userSchema = new Schema({
   email: {type: String, require: true},
   password: {type: String, require: true},
   group: {type: Schema.Types.ObjectId, ref: 'Group', required: true},
-  score: {type: String, default: 0},
+  score: {type: Number, default: 0},
   codewars_user: String,
   github_user: String,
 }, {

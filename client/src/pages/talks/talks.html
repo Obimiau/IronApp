@@ -9,13 +9,14 @@
 
 <ion-content padding>
   <ion-card>
-    <img src="http://boomerangazart.com/wp-content/uploads/2017/08/Cool-Pictures-Of-Blueprints-42-About-Remodel-Elegant-Design-with-Pictures-Of-Blueprints.jpg"/>
+    <img src="{{project.image}}"/>
     <ion-card-content>
       <ion-card-title>
-        Project
-        </ion-card-title>
+        {{project.name}}
+      </ion-card-title>
+      <h2>{{project.author}}</h2>
       <p>
-        Description
+        {{project.description}}
       </p>
     </ion-card-content>
   </ion-card>

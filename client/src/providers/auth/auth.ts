@@ -32,8 +32,8 @@ export class AuthProvider {
     return this.user;
   }
 
-  signup(username:string, password:string) {
-    return this.http.post(`${BASE_URL}/signup`, {username, password}, this.options)
+  signup(user:object) {
+    return this.http.post(`${BASE_URL}/signup`, user, this.options)
       .map(user => this.handleUser(user))
       .catch(this.handleError);
   }

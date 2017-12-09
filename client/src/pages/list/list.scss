@@ -1,10 +1,25 @@
 page-list {
 
+  .trophyIcon {
+    float: right;
+    font-size: 30px;
+    color: #eabf3c;
+  }
 
-}
+  ion-item:nth-child(1) {
+    .trophyIcon {
+      color: gold;
+    }
+  }
+  ion-item:nth-child(2) {
+    .trophyIcon {
+      color: silver;
+    }
+  }
+  ion-item:nth-child(3) {
+    .trophyIcon {
+      color: #9b7503;
+    }
+  }
 
-.trophyIcon {
-float: right;
-font-size: 30px;
-color: #eabf3c;
 }

@@ -7,8 +7,7 @@ const {ensureLoggedIn,ensureLoggedOut} = require('connect-ensure-login');
 const groupRoutes = express.Router();
 
 groupRoutes.get('/:id/ranking', (req, res, next) => {
-  User.find({group: req.params.id}, (err, users) => {
-    users.sort( (a, b) => { b.score - a.score });
+  User.find({group: req.params.id}).sort({'score': 1}).then((users) => {
     return res.status(200).json({ users: users });
   });
 });

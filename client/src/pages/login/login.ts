@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import { HomePage } from '../home/home';
+import { SignupPage } from '../signup/signup';
 
 @IonicPage()
 @Component({
@@ -31,9 +32,10 @@ export class LoginPage {
     this.auth.logout().subscribe();
   }
 
-  signup(username, password) {
-    this.auth.signup(username, password).subscribe();
+  register() {
+    this.navCtrl.push(SignupPage);
   }
+
 
   ngOnInit() {
   }

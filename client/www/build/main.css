@@ -25678,8 +25678,20 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-.trophyIcon {
+page-list .trophyIcon {
   float: right;
   font-size: 30px;
   color: #eabf3c;
+}
+
+page-list ion-item:nth-child(1) .trophyIcon {
+  color: gold;
+}
+
+page-list ion-item:nth-child(2) .trophyIcon {
+  color: silver;
+}
+
+page-list ion-item:nth-child(3) .trophyIcon {
+  color: #9b7503;
 }

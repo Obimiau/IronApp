@@ -9,11 +9,11 @@
 
 <ion-content>
   <ion-list>
-    <ion-item ion-item *ngFor="let user of users">
+    <ion-item ion-item *ngFor="let user of users; let i=index">
       <ion-avatar item-start>
-        <img src="http://www.iconninja.com/files/373/611/612/person-user-profile-male-man-avatar-account-icon.svg">
+        <img src="{{user.avatar}}">
       </ion-avatar>
-      <ion-icon class="trophyIcon" name="trophy"></ion-icon>
+      <ion-icon class="trophyIcon" name="trophy" *ngIf="i<3"></ion-icon>
       <h2>{{user.fullName}}</h2>
 
 
