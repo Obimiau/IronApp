@@ -7,26 +7,25 @@ const User = require('../models/User');
 const {ensureLoggedIn,ensureLoggedOut} = require('connect-ensure-login');
 const rateRoutes = express.Router();
 
-ratingRoutes.get('/:id', ensureLoggedIn(), (req, res, next) => {
+rateRoutes.get('/:id', ensureLoggedIn(), (req, res, next) => {
 Rating.findById(req.params.id, (err, rate) => {
     return res.status(200).json(rate);
   });
 });
 
 rateRoutes.post('/', ensureLoggedIn(), (req, res, next) => {
-
-  let newRate = new Rate({
-    project: req.body.name,
+  let newRate = new Rating({
+    project: req.body.project,
     user: req.user._id,
     rate: req.body.rate,
-    comments: req.body.comments
+    comment: req.body.comment
   });
+  console.log("at least");
 
   newRate.save().then( createdRate => {
     return res.status(200).json(createdRate);
   });
 });
-
 
 
 module.exports = rateRoutes;

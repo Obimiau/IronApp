@@ -25678,6 +25678,15 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-home .item-ios img {
+  width: 110px;
+  height: 110px;
+}
+
+page-home .scroll-content {
+  background-color: #FFF3E5;
+}
+
 page-list .trophyIcon {
   float: right;
   font-size: 30px;

@@ -15,6 +15,7 @@ const auth = require('./routes/auth');
 const user = require('./routes/user');
 const group = require('./routes/group');
 const project = require('./routes/project');
+const rating = require('./routes/rating');
 
 
 mongoose.connect(process.env.DBURL).then(() =>{
@@ -60,6 +61,7 @@ app.use('/api/auth', auth);
 app.use('/api/user', user);
 app.use('/api/group', group);
 app.use('/api/project', project);
+app.use('/api/rating', rating);
 
 // app.use('/', index);
 // app.use('/users', users);

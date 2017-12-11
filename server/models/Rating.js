@@ -3,8 +3,9 @@ const Schema   = mongoose.Schema;
 
 const ratingSchema = new Schema({
   project: {type: Schema.Types.ObjectId, ref: 'Project', required: true},
+  user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
   rate: {type: Number, required: true},
-  comments: String
+  comment: String
 }, {
   timestamps: {
     createdAt: 'created_at',
