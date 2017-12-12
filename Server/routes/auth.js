@@ -33,14 +33,6 @@ authRoutes.post('/signup', (req, res, next) => {
   .then(createdUser => {
     console.log(createdUser);
     res.status(200).json(createdUser);
-    // req.login(createdUser, (err) => {
-    //   if (err) {
-    //     console.log(err);
-    //     res.status(500).json({ message: 'Something went wrong' });
-    //     return;
-    //   }
-    //   res.status(200).json(req.user);
-    // });
   })
   .catch(e => {
       console.log(e)
