@@ -3,37 +3,37 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Profile</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
 
+<div class="profilecard">
     <ion-item>
-      <ion-avatar item-start>
-        <img src="https://www.sideshowtoy.com/photo_9024991_thumb.jpg">
-      </ion-avatar>
-      <h2>{{user.fullName}}</h2>
+      <div class="name">
+        <h2>{{user.fullName}}</h2>
+      </div>
+
+      <div class="avatar">
+        <ion-avatar item-start>
+          <img src="https://www.spreadshirt.com/image-server/v1/mp/designs/1008757790,width=178,height=178/caticorn.png">
+        </ion-avatar>
+      </div>
     </ion-item>
 
-    <!-- <img src="https://timedotcom.files.wordpress.com/2016/01/160115-delorean-car.jpg?quality=85">
-
-    <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-    </ion-card-content> -->
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="md-podium"></ion-icon>
-          <div>Codewars Score: </div>
+          <div>Codewars score: {{user.score}}</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="logo-octocat"></ion-icon>
-          <div>Github Commits: </div>
+          <div>Commits: 50 </div>
         </button>
       </ion-col>
       <ion-col center text-center>
@@ -41,5 +41,16 @@
       </ion-col>
     </ion-row>
 
-  </ion-card>
+
+  </div>
+
+<div class="createproject">
+
+
+  <button ion-button icon-right>
+  Create New Project!
+  <ion-icon name="md-laptop"></ion-icon>
+  </button>
+  </div>
+
 </ion-content>

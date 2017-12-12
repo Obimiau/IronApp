@@ -1,13 +1,38 @@
 page-home {
 
+
 .item-ios img {
-  width: 110px;
-  height: 110px;
+  width: 140px;
+  height: 140px;
 }
 
-.scroll-content {
-background-color: #FFF3E5;
+.createproject button {
+  width: 100%;
+}
+
+.profilecard ion-card {
+  width: 100%;
+  margin: 0 5px 20px 0;
+  padding: 0 0 10px 0;
+}
+
+
+.avatar {
+display: flex;
+justify-content: center;
+margin: 0;
 
 }
 
+.name {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+
+.name h2 {
+  font-size: 25px;
+  font-family: roboto;
+}
 }

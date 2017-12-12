@@ -10,6 +10,8 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { TalksPage } from '../pages/talks/talks';
 import { SignupPage } from '../pages/signup/signup';
+import { ProjectPage } from '../pages/project/project';
+import { EditPage } from '../pages/edit/edit';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +25,9 @@ import { GroupProvider } from '../providers/group/group';
     ListPage,
     LoginPage,
     TalksPage,
-    SignupPage
+    SignupPage,
+    ProjectPage,
+    EditPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { GroupProvider } from '../providers/group/group';
     ListPage,
     LoginPage,
     TalksPage,
-    SignupPage
+    SignupPage,
+    ProjectPage,
+    EditPage
   ],
   providers: [
     StatusBar,
