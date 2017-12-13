@@ -35,7 +35,9 @@ userRoutes.post('/edit', (req, res, next) => {
             "github_user": req.body.github_user || req.user.github_user,
             "codewars_user": req.body.codewars_user || req.user.codewars_user,
             "avatar": req.body.avatar || req.user.avatar,
-            "score": data.data.honor
+            "score": data.data.honor,
+            "challenges": data.data.codeChallenges.totalCompleted,
+            "languages": Object.keys(data.data.ranks.languages)
           }
         }, {
           new: true

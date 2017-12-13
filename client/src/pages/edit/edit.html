@@ -5,6 +5,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Edit Profile</ion-title>
+    <img class="logo" src="/assets/imgs/logo.png">        
   </ion-navbar>
 
 </ion-header>
@@ -33,11 +34,9 @@
     </ion-item>
 
     <ion-item>
-      <ion-label fixed>Avatar</ion-label>
-      <ion-input [(ngModel)]="user.avatar" type="string"></ion-input>
+      <button ion-button color="dark" (click)="takePicture()"><ion-icon class="camera" name="camera"></ion-icon>New avatar</button>
+      <button ion-button color="dark" (click)="updateProfile()"> Update Profile </button>
     </ion-item>
-
   </ion-list>
 
-  <button ion-button color="dark" (click)="updateProfile()"> Update Profile </button>
 </ion-content>

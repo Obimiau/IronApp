@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7E6B0429376786C9127C3BADE1AD4D10E80DA992",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "45881551BB0FC14C12B9D1E256950743B8095E35" : 9223372036854775807,
+    "7E6B0429376786C9127C3BADE1AD4D10E80DA992" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "71EF6F08-2F27-4DE3-BC8D-950897E82029",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "45881551BB0FC14C12B9D1E256950743B8095E35" : "",
+    "7E6B0429376786C9127C3BADE1AD4D10E80DA992" : "Client\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "project",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "platforms\/ios\/project.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Obimiau\/IronApp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "45881551BB0FC14C12B9D1E256950743B8095E35"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.ionicjs.com:obimiau\/ironapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E6B0429376786C9127C3BADE1AD4D10E80DA992"
+    }
+  ]
+}

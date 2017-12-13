@@ -19,7 +19,7 @@ projectRoutes.post('/', ensureLoggedIn(), (req, res, next) => {
   let newProject = new Project({
     name: req.body.name,
     author: req.user._id,
-    image: req.body.image || '/imgs/Batmobile_Blueprint.jpg',
+    image: req.body.image || 'assets/imgs/Batmobile_Blueprint.jpg',
     description: req.body.description
   });
 

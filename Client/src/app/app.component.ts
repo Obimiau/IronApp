@@ -1,5 +1,6 @@
+import { AuthProvider } from './../providers/auth/auth';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -20,16 +21,16 @@ export class MyApp {
 
   rootPage: any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}> = [];
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private authProvider: AuthProvider) {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Profile', component: HomePage },
-      { title: 'Ranking', component: ListPage },
-      { title: 'Talks', component: TalksPage },
-      { title: 'Edit Profile', component: EditPage }
+      { title: 'Profile', component: HomePage, icon: 'home' },
+      { title: 'Ranking', component: ListPage, icon: 'podium' },
+      { title: 'Talks', component: TalksPage, icon: 'text' },
+      { title: 'Edit Profile', component: EditPage, icon: 'settings' }
     ];
 
   }
@@ -38,6 +39,12 @@ export class MyApp {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+    });
+  }
+
+  logout() {
+    this.authProvider.logout().subscribe(() => {
+      this.nav.setRoot(LoginPage);      
     });
   }
 

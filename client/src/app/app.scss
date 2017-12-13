@@ -1,0 +1,11 @@
+.menu {
+    .label {
+        display: flex;
+        align-items: center;
+
+        ion-icon {
+            color: lightgray;
+            margin-right: 15px;
+        }
+    }
+}

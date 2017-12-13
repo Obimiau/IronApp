@@ -9,9 +9,10 @@ const {
 const jokeRoutes = express.Router();
 
 
-jokeRoutes.get('/:id', ensureLoggedIn(), (req, res, next) => {
-  Jokes.findById(req.params.id, (err, project) => {
-    return res.status(200).json(project);
+jokeRoutes.get('/', ensureLoggedIn(), (req, res, next) => {
+  Joke.find({}, (err, jokes) => {
+    const idx = Math.floor(Math.random() * jokes.length);
+    return res.status(200).json(jokes[idx]);
   });
 });
 
@@ -21,8 +22,8 @@ jokeRoutes.post('/', ensureLoggedIn(), (req, res, next) => {
     description: req.body.name
   });
 
-  newProject.save().then(createdProject => {
-    return res.status(200).json(createdProject);
+  newJoke.save().then(createdJoke => {
+    return res.status(200).json(createdJoke);
   });
 });
 

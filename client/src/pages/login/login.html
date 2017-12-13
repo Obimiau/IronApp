@@ -1,13 +1,7 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
 <ion-content padding>
 
+  <img class="logo" src="/assets/imgs/logo.png">    
+    
   <ion-list>
 
     <ion-item>
@@ -19,7 +13,7 @@
       <ion-label fixed>Password</ion-label>
       <ion-input [(ngModel)]="password" type="password"></ion-input>
     </ion-item>
-
+    <p text-wrap text-center>{{errorMessage}} </p>
   </ion-list>
 
   <button ion-button color="dark" (click)="login(username,password)"> login </button>

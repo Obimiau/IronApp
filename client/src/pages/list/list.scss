@@ -1,9 +1,54 @@
 page-list {
 
+  .logo {
+    width: 30px;
+    float: right;
+    margin-right: 10px;
+  }
+
   .trophyIcon {
     float: right;
     font-size: 30px;
     color: #eabf3c;
+  }
+
+  ion-badge {
+    margin: 2px !important;
+  }
+
+  ion-item {
+    &:not(.podium):nth-child(even) {
+      background: #f3f3f3;
+    }
+  }
+  .podium {
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 33%;
+    padding: 10px 0;
+    min-height: 112px;
+
+    .item-inner {
+      border: 0 !important;
+    }
+
+    ion-label {
+      width: 100%;
+      margin: 0;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    ion-avatar {
+      margin: 10px 0;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
   }
 
   ion-item:nth-child(1) {
@@ -12,6 +57,11 @@ page-list {
     }
   }
   ion-item:nth-child(2) {
+    margin-top: 15px;
+    ion-avatar img {
+      width: 55px;
+      height: 55px;
+    }
     .trophyIcon {
       color: silver;
     }
@@ -19,6 +69,11 @@ page-list {
   ion-item:nth-child(3) {
     .trophyIcon {
       color: #9b7503;
+    }
+    ion-avatar img {
+      margin-top: 30px;
+      width: 40px;
+      height: 40px;
     }
   }
 

@@ -4,19 +4,26 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Ranking</ion-title>
+    <img class="logo" src="/assets/imgs/logo.png">    
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item ion-item *ngFor="let user of users; let i=index">
+    <ion-item [ngClass]="{'podium': i<3}" ion-item *ngFor="let user of users; let i=index">
       <ion-avatar item-start>
         <img src="{{user.avatar}}">
       </ion-avatar>
       <ion-icon class="trophyIcon" name="trophy" *ngIf="i<3"></ion-icon>
-      <h2>{{user.fullName}}</h2>
-
-      <p>Score {{user.score}}</p>
+      <h2 text-wrap>{{user.fullName}}</h2>
+      <ion-badge item-end>
+        {{user.score}} 
+        <ion-icon name="ribbon"></ion-icon>
+      </ion-badge>
+      <ion-badge item-end>
+        {{user.challenges}} 
+        <ion-icon name="clipboard"></ion-icon>
+      </ion-badge>
     </ion-item>
   </ion-list>
 </ion-content>

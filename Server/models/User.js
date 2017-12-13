@@ -11,6 +11,8 @@ const userSchema = new Schema({
   score: {type: Number, default: 0},
   codewars_user: String,
   github_user: String,
+  challenges: {type: Number, default: 0},
+  languages: {type: Array, default: []},
 }, {
   timestamps: {
     createdAt: 'created_at',

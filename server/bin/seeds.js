@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/ironapp', {useMongoClient: true});
 const Joke = require('../models/Jokes');
 
-const Jokes = [
+const jokes = [
   {
     description: 'Q. How do you comfort a JavaScript bug? A. You console it'
   },

@@ -1,5 +1,11 @@
 page-talks {
 
+    .logo {
+        width: 30px;
+        float: right;
+        margin-right: 10px;
+      }
+      
     ion-card {
         &:not(.current) {
             background: #ddd;

@@ -12,6 +12,7 @@ import { SignupPage } from '../signup/signup';
 export class LoginPage {
   username;
   password;
+  errorMessage = '';
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthProvider) {
     this.auth.isLoggedIn().subscribe((data) => {
       if (data) {
@@ -23,8 +24,11 @@ export class LoginPage {
   login(username, password) {
     this.auth.login(username, password).subscribe((data) => {
       if (data.username) {
+        this.errorMessage = '';
         this.navCtrl.setRoot(HomePage)
       }
+    }, (err) => {
+      this.errorMessage = 'wrong username or password ';
     });
   }
 
