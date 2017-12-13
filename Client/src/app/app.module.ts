@@ -22,6 +22,7 @@ import { GroupProvider } from '../providers/group/group';
 import { KeysPipe } from '../pipes/keys/keys';
 import { PipesModule } from '../pipes/pipes.module';
 import { UserProvider } from '../providers/user/user';
+import { ProjectProvider } from '../providers/project/project';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { UserProvider } from '../providers/user/user';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     GroupProvider,
-    UserProvider
+    UserProvider,
+    ProjectProvider
   ]
 })
 export class AppModule {}
