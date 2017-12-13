@@ -1,6 +1,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Edit Profile</ion-title>
   </ion-navbar>
 
@@ -10,28 +13,23 @@
   <ion-list>
 
     <ion-item>
-      <ion-label fixed>Username</ion-label>
-      <ion-input [(ngModel)]="user.username" type="text" ></ion-input>
-    </ion-item>
-
-    <ion-item>
       <ion-label fixed>Full Name</ion-label>
-      <ion-input [(ngModel)]="user.fullname" type="text" ></ion-input>
+      <ion-input [(ngModel)]="user.fullName" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label fixed>Email</ion-label>
-      <ion-input [(ngModel)]="user.email" type="email" ></ion-input>
+      <ion-input [(ngModel)]="user.email" type="email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label fixed>Codewars User</ion-label>
-      <ion-input [(ngModel)]="user.codewars" type="string"></ion-input>
+      <ion-input [(ngModel)]="user.codewars_user" type="string"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label fixed>Github User</ion-label>
-      <ion-input [(ngModel)]="user.github" type="string"></ion-input>
+      <ion-input [(ngModel)]="user.github_user" type="string"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -41,5 +39,5 @@
 
   </ion-list>
 
-  <button ion-button color="dark"> Update Profile </button>
+  <button ion-button color="dark" (click)="updateProfile()"> Update Profile </button>
 </ion-content>

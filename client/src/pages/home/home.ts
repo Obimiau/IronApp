@@ -11,7 +11,6 @@ export class HomePage {
   user = {};
 
   constructor(public navCtrl: NavController, private authProvider: AuthProvider) {
-    // Recupero usuario del provider auth, que guarda al hacer loggin
     this.user = this.authProvider.user;
   }
 

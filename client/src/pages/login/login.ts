@@ -12,16 +12,16 @@ import { SignupPage } from '../signup/signup';
 export class LoginPage {
   username;
   password;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private auth:AuthProvider) {
-    this.auth.isLoggedIn().subscribe( (data) => {
-      if(data) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthProvider) {
+    this.auth.isLoggedIn().subscribe((data) => {
+      if (data) {
         this.navCtrl.setRoot(HomePage);
       }
     });
   }
 
-  login(username, password){
-    this.auth.login(username,password).subscribe( (data) => {
+  login(username, password) {
+    this.auth.login(username, password).subscribe((data) => {
       if (data.username) {
         this.navCtrl.setRoot(HomePage)
       }

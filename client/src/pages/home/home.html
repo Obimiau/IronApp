@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
-<div class="profilecard">
+  <div class="profilecard">
     <ion-item>
       <div class="name">
         <h2>{{user.fullName}}</h2>
@@ -17,7 +17,7 @@
 
       <div class="avatar">
         <ion-avatar item-start>
-          <img src="https://www.spreadshirt.com/image-server/v1/mp/designs/1008757790,width=178,height=178/caticorn.png">
+          <img src="{{user.avatar}}">
         </ion-avatar>
       </div>
     </ion-item>
@@ -44,10 +44,10 @@
 
   </div>
 
-<div class="createproject">
+  <div class="createproject">
 
 
-  <button ion-button icon-right (click)="createProject()">
+    <button ion-button icon-right (click)="createProject()">
   Create New Project!
   <ion-icon name="md-laptop"></ion-icon>
   </button>

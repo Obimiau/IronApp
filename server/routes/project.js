@@ -2,7 +2,10 @@ const express = require('express');
 const passport = require('passport');
 const Project = require('../models/Project');
 
-const {ensureLoggedIn,ensureLoggedOut} = require('connect-ensure-login');
+const {
+  ensureLoggedIn,
+  ensureLoggedOut
+} = require('connect-ensure-login');
 const projectRoutes = express.Router();
 
 projectRoutes.get('/:id', ensureLoggedIn(), (req, res, next) => {
@@ -20,7 +23,7 @@ projectRoutes.post('/', ensureLoggedIn(), (req, res, next) => {
     description: req.body.description
   });
 
-  newProject.save().then( createdProject => {
+  newProject.save().then(createdProject => {
     return res.status(200).json(createdProject);
   });
 });

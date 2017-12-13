@@ -1,13 +1,37 @@
-
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Project</ion-title>
+    <ion-title>Create New Project</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <h1> Authentication </h1>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Project Name</ion-label>
+      <ion-input [(ngModel)]="project.name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Author</ion-label>
+      <ion-input [(ngModel)]="project.author" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Image</ion-label>
+      <ion-input [(ngModel)]="project.image" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Description</ion-label>
+      <ion-input [(ngModel)]="project.description" type="text"></ion-input>
+    </ion-item>
+
+
+  </ion-list>
+
+  <button ion-button color="dark" (click)="signup(user)"> Create! </button>
 
 </ion-content>
