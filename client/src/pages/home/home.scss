@@ -8,6 +8,7 @@ page-home {
 
 .createproject button {
   width: 100%;
+  margin-top: 20px;
 }
 
 .profilecard ion-card {
@@ -35,4 +36,14 @@ margin: 0;
   font-size: 25px;
   font-family: roboto;
 }
+
+.jokes{
+  margin-top: 40px;
+  background-color: #f9f9f7;
+}
+ion-card-header h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+
 }

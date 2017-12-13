@@ -9,6 +9,7 @@ import { ProjectPage } from '../project/project';
 })
 export class HomePage {
   user = {};
+  project = {};
 
   constructor(public navCtrl: NavController, private authProvider: AuthProvider) {
     this.user = this.authProvider.user;

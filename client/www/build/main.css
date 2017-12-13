@@ -25685,6 +25685,7 @@ page-home .item-ios img {
 
 page-home .createproject button {
   width: 100%;
+  margin-top: 20px;
 }
 
 page-home .profilecard ion-card {
@@ -25721,6 +25722,16 @@ page-home .name {
 page-home .name h2 {
   font-size: 25px;
   font-family: roboto;
+}
+
+page-home .jokes {
+  margin-top: 40px;
+  background-color: #f9f9f7;
+}
+
+page-home ion-card-header h2 {
+  text-align: center;
+  padding-top: 10px;
 }
 
 page-list .trophyIcon {

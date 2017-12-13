@@ -7,6 +7,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'project.html',
 })
 export class ProjectPage {
+  project = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -14,6 +15,5 @@ export class ProjectPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProjectPage');
   }
-
 
 }

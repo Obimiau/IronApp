@@ -15,6 +15,7 @@ const user = require('./routes/user');
 const group = require('./routes/group');
 const project = require('./routes/project');
 const rating = require('./routes/rating');
+const joke = require('./routes/jokes');
 
 mongoose.connect('mongodb://localhost/ironapp').then(() => {
   console.log(`Connected to DB: ${process.env.DBURL}`);
@@ -59,6 +60,7 @@ app.use('/api/user', user);
 app.use('/api/group', group);
 app.use('/api/project', project);
 app.use('/api/rating', rating);
+app.use('/api/jokes', joke);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
