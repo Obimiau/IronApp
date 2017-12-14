@@ -21,6 +21,11 @@
           <img src="{{user.avatar}}">
         </ion-avatar>
       </div>
+      <div class="row">
+        <ion-badge *ngFor="let lng of user.languages">
+          {{lng}}
+        </ion-badge>
+      </div>
     </ion-item>
 
 

@@ -11,6 +11,7 @@ import { TalksPage } from '../pages/talks/talks';
 import { SignupPage } from '../pages/signup/signup';
 import { ProjectPage } from '../pages/project/project';
 import { EditPage } from '../pages/edit/edit';
+import { MyprojectsPage } from '../pages/myprojects/myprojects';
 
 
 @Component({
@@ -30,6 +31,7 @@ export class MyApp {
       { title: 'Profile', component: HomePage, icon: 'home' },
       { title: 'Ranking', component: ListPage, icon: 'podium' },
       { title: 'Talks', component: TalksPage, icon: 'text' },
+      { title: 'My Projects', component: MyprojectsPage, icon: 'md-laptop' },
       { title: 'Edit Profile', component: EditPage, icon: 'settings' }
     ];
 
@@ -44,7 +46,7 @@ export class MyApp {
 
   logout() {
     this.authProvider.logout().subscribe(() => {
-      this.nav.setRoot(LoginPage);      
+      this.nav.setRoot(LoginPage);
     });
   }
 

@@ -15,6 +15,7 @@ import { TalksPage } from '../pages/talks/talks';
 import { SignupPage } from '../pages/signup/signup';
 import { ProjectPage } from '../pages/project/project';
 import { EditPage } from '../pages/edit/edit';
+import { MyprojectsPage } from '../pages/myprojects/myprojects';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,7 +36,8 @@ import { JokesProvider } from '../providers/jokes/jokes';
     TalksPage,
     SignupPage,
     ProjectPage,
-    EditPage
+    EditPage,
+    MyprojectsPage
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,7 @@ import { JokesProvider } from '../providers/jokes/jokes';
     SignupPage,
     ProjectPage,
     EditPage,
+    MyprojectsPage
   ],
   providers: [
     StatusBar,

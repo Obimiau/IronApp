@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Projects</ion-title>
+    <img class="logo" src="/assets/imgs/logo.png">
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let project of projects; let i=index">
+    <img src="{{project.image}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ project.name }}
+        </ion-card-title>
+      <p>
+        {{project.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

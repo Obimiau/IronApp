@@ -15,6 +15,7 @@ export class EditPage {
   options: CameraOptions;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private authProvider: AuthProvider, private userProvider: UserProvider, private camera: Camera) {
+    console.log(this.authProvider.user);
     this.user = this.authProvider.user;
     this.options = {
       quality: 100,

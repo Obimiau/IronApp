@@ -11,6 +11,10 @@ export class ProjectProvider {
     console.log('Hello ProjectProvider Provider');
   }
 
+  getProjects() {
+    return this.http.get(`http://localhost:3000/api/project/own`, this.options);
+  }
+
   createProject(project) {
     return this.http.post(`http://localhost:3000/api/project`, project, this.options);
   }

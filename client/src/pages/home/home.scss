@@ -10,6 +10,17 @@ page-home {
   height: 140px;
 }
 
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  ion-badge {
+    margin:5px;
+  }
+}
+
 .createproject button {
   width: 100%;
   margin-top: 20px;

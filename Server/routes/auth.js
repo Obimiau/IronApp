@@ -12,7 +12,7 @@ authRoutes.post('/signup', (req, res, next) => {
     codewars_user: req.body.codewars_user ||  null,
     github_user: req.body.github_user ||  null,
     fullName: req.body.github_user ||  null,
-    avatar: req.body.avatar || '/imgs/no_image_user.png',
+    avatar: req.body.avatar || '/assets/imgs/no_image_user.png',
     score: req.body.score || 0
   };
 

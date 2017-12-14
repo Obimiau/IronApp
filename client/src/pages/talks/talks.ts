@@ -20,7 +20,6 @@ export class TalksPage {
 
     this.groupProvider.getCurrentUserGroup().subscribe( (data) => {
       this.group = data;
-      // coger proyectos del grupo
       this.db.list(`${data['_id']}/projects`).valueChanges().subscribe((data) => {
         this.projects = data;
       });

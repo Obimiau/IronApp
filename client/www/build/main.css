@@ -25695,6 +25695,13 @@ ion-navbar.toolbar {
   margin-right: 15px;
 }
 
+ion-avatar {
+  margin: 0;
+  border: 1px solid gray;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
 page-edit .logo {
   width: 30px;
   float: right;
@@ -25714,6 +25721,25 @@ page-home .logo {
 page-home .item-ios img {
   width: 140px;
   height: 140px;
+}
+
+page-home .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+page-home .row ion-badge {
+  margin: 5px;
 }
 
 page-home .createproject button {
@@ -25887,6 +25913,12 @@ page-login .scroll-content {
   -ms-flex-align: center;
   align-items: center;
   color: white;
+}
+
+page-myprojects .logo {
+  width: 30px;
+  float: right;
+  margin-right: 10px;
 }
 
 page-project .logo {

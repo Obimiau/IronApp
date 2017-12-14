@@ -82,7 +82,7 @@ groupRoutes.get('/', ensureLoggedIn(), (req, res, next) => {
   })
 });
 
-groupRoutes.post('/', ensureLoggedIn(), (req, res, next) => {
+groupRoutes.post('/', (req, res, next) => {
 
   let newGroup = new Group({
     name: req.body.name,

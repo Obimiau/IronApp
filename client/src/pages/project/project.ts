@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProjectProvider } from '../../providers/project/project';
 import { HomePage } from '../home/home';
+import { MyprojectsPage } from '../myprojects/myprojects';
+
 
 @IonicPage()
 @Component({
@@ -20,7 +22,7 @@ export class ProjectPage {
 
   createProject() {
     this.projectProvider.createProject(this.project).subscribe(() => {
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.setRoot(MyprojectsPage);
     });
   }
 }
