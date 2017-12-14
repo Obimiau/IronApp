@@ -4,14 +4,14 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Talks</ion-title>
-    <img class="logo" src="/assets/imgs/logo.png">    
+    <img class="logo" src="/assets/imgs/logo.png">
   </ion-navbar>
 </ion-header>
 
 <ion-content padding >
   <ion-item *ngIf="projects.length == 0">
     <h1 text-wrap text-center>No projects presentations today</h1>
-    <button (click)="startPresentation()">Start presentations!</button>
+    <button (click)="startPresentation()" ion-button color="dark">Start presentations!</button>
   </ion-item>
   <ion-card class="current" *ngIf="projects.length > 0">
     <img src="{{projects[currentProject]?.image}}"/>
@@ -30,11 +30,11 @@
             <ion-input type="text" [(ngModel)]="comment"></ion-input>
           </ion-item>
         <ion-item>
-          <ion-icon (click)="rating(1)" [ngClass]="{'active': rate >= 1}" name="start" md="md-star"></ion-icon>
-          <ion-icon (click)="rating(2)" [ngClass]="{'active': rate >= 2}" name="start" md="md-star"></ion-icon>
-          <ion-icon (click)="rating(3)" [ngClass]="{'active': rate >= 3}" name="start" md="md-star"></ion-icon>
-          <ion-icon (click)="rating(4)" [ngClass]="{'active': rate >= 4}" name="start" md="md-star"></ion-icon>
-          <ion-icon (click)="rating(5)" [ngClass]="{'active': rate >= 5}" name="start" md="md-star"></ion-icon>
+          <ion-icon (click)="rating(1)" [ngClass]="{'active': rate >= 1}" name="star"></ion-icon>
+          <ion-icon (click)="rating(2)" [ngClass]="{'active': rate >= 2}" name="star"></ion-icon>
+          <ion-icon (click)="rating(3)" [ngClass]="{'active': rate >= 3}" name="star"></ion-icon>
+          <ion-icon (click)="rating(4)" [ngClass]="{'active': rate >= 4}" name="star"></ion-icon>
+          <ion-icon (click)="rating(5)" [ngClass]="{'active': rate >= 5}" name="star"></ion-icon>
           <button class="button" (click)="postRating()" ion-button icon-left>Vote</button>
         </ion-item>
         <ion-item class="rate">

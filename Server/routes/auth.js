@@ -2,6 +2,7 @@ const express = require('express');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
+const Group = require('../models/Group');
 const authRoutes = express.Router();
 
 authRoutes.post('/signup', (req, res, next) => {
@@ -75,6 +76,12 @@ authRoutes.post('/login', (req, res, next) => {
       res.status(200).json(req.user);
     });
   })(req, res, next);
+});
+
+authRoutes.get('/groups', (req, res, next) => {
+  Group.find({}, (err, groups) => {
+    return res.status(200).json({groups});
+  });
 });
 
 authRoutes.get('/logout', (req, res, next) => {

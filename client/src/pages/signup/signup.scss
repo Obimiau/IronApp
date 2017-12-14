@@ -5,4 +5,24 @@ page-signup {
         float: right;
         margin-right: 10px;
       }
+
+      ion-list {
+          ion-label {
+            display: flex;
+            ion-icon {
+                margin-right: 10px;
+            }
+          }
+      }
+
+      .avatar {
+        border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100px;
+        }
+      }
 }

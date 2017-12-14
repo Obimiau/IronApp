@@ -25933,6 +25933,37 @@ page-signup .logo {
   margin-right: 10px;
 }
 
+page-signup ion-list ion-label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-signup ion-list ion-label ion-icon {
+  margin-right: 10px;
+}
+
+page-signup .avatar {
+  border: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+page-signup .avatar img {
+  width: 100px;
+}
+
 page-talks .logo {
   width: 30px;
   float: right;

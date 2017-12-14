@@ -8,7 +8,7 @@ import { ProjectProvider} from '../../providers/project/project';
   templateUrl: 'myprojects.html',
 })
 export class MyprojectsPage {
-  projects = [];
+  projects: any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private projectProvider: ProjectProvider) {
     this.projectProvider.getProjects().subscribe( (data) => {

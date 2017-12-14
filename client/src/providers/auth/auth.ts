@@ -51,6 +51,10 @@ export class AuthProvider {
       .catch(this.handleError);
   }
 
+  getGroups() {
+    return this.http.get(`${BASE_URL}/groups`,this.options);
+  }
+
   isLoggedIn() {
     return this.http.get(`${BASE_URL}/loggedin`,this.options)
       .map(user => this.handleUser(user))
